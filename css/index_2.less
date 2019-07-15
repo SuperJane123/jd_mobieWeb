@@ -1,0 +1,362 @@
+@import './bass.less';
+@font_color:#c91523;
+
+.view {
+    margin: 0 auto;
+    min-width: 320px;
+
+    // 顶部工具栏开始
+    .top_bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 40px;
+        background: #c91523;
+        display: flex;
+        justify-content: space-between;
+        .logo {
+            padding: 10px 5px;
+            h1 {
+                a {
+                    display: block;
+                    width: 112px/2;
+                    height: 20px;
+                    font-size: 0;
+                    background: url('../images/jd-sprites.png') no-repeat 0 -218px/2;
+                    background-size: 200px 200px;
+                }
+            }
+        }
+        .search {
+            flex: 1;
+            padding: 5px 0;
+            &::after {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                content: "";
+                display: block;
+                width: 20px;
+                height: 20px;
+                background: url('../images/jd-sprites.png') no-repeat -120px/2 -218px/2;
+                background-size: 200px 200px;
+            }
+            
+            input {
+                width: 100%;
+                height: 100%;
+                text-indent: 30px;
+                border-radius: 25px;
+            }
+        }
+        >a {
+            padding: 10px 0;
+            width: 50px;
+            text-align: center;
+            color: #fff;
+        }
+
+    }
+
+
+    // 功能部分开始
+
+    .function {
+        border-bottom: 10px solid #f5f5f5;
+        a {
+            float: left;
+            margin: 5px 0;
+            width: 25%;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            img {
+                width: 50%;
+                margin: 0 auto
+            }
+        }
+    }
+
+
+    // 掌上秒杀开始
+    .hand_kill {
+        .kill_title {
+            display: flex;
+            justify-content:    space-between;
+            .time {
+                display: flex;
+                align-items: center;
+                i {
+                    margin: 0 15px;
+                    width: 18px;
+                    height: 22px;
+                    background: url('../images/jd-sprites.png') no-repeat -167px/2 -218px/2;
+                    background-size: 200px 200px;
+                }
+                 em {
+                     color: @font_color;
+                     margin-right: 15px;
+                 }
+                 >span {
+                     margin-right: 2px;
+                     padding: 0 2px;
+                     color: #fff;
+                     background: #3d3d3d;
+                     &:nth-last-child(3n) {
+                         background: #fff;
+                         color: #666;
+                     }
+                 }
+            }
+            >a {
+                font-size: 14px;
+            }
+        }
+        .kill_content{
+            font-size: 14px;
+            padding-top: 10px;
+            li {
+                position: relative;
+                float: left;
+                width: 33.33%;
+                text-align: center;
+                color: #666;
+                a {
+                    img {
+                        margin: 0 auto;
+                    }
+                     p {
+                         color: @font_color;
+                    }
+                }
+                .hot_sell {
+                    position: absolute;
+                    top: 36%;
+                    left: 50%;
+                    display: block;
+                    width: 48px;
+                    height: 26px;
+                    line-height: 26px;
+                    color: #fff;
+                    background: #fdb60a;
+                    border-radius: 50%;
+                }
+                
+            }
+            
+        }
+    }
+
+    // 狂撒亿万神券开始
+    .coupon {
+        position: relative;
+        .super_goods {
+            position: absolute;
+            top: 30%;
+            left: 0;
+            >a {
+                float: left;
+                width: 50%;
+                padding: 0 5px;
+            }
+        }
+    }
+
+    // 京东中间导航部分开始
+
+    .jd_pro {
+        a {
+            float: left;
+            width: 50%;
+            &:nth-child(-n+3) {
+                width: 33.3%;
+            }
+        }
+    }
+
+    // 广告部分
+    .adv {
+        padding: 5px;
+    }
+
+    // 特色超市开始
+    .supermarket {
+        .market_title {
+            padding: 5px;
+            color: @font_color;
+        }
+        .market_content {
+            a {
+                float: left;
+                width: 50%;
+                &:nth-child(2) {
+                   padding-bottom: 1px;
+                }
+            }
+        }
+    }
+
+
+    // 主体街部分开始
+    .theme {
+        .theme_title {
+            h4 {
+             padding: 5px;
+             color: @font_color;
+            }
+        }
+        .theme_content {
+            a {
+                float: left;
+                width: 25%;
+                &:nth-child(-n+2) {
+                    width: 50%;
+                }
+                &:nth-child(2) {
+                    padding-bottom: 1px;
+                }
+            }
+        }
+    }
+
+
+    // 品牌推荐开始
+
+    .recom_brand {
+        .brand_title {
+            h4 {
+             padding: 5px;
+             color: @font_color;
+            }
+        }
+        .brand_content {
+            display: flex;
+            a {
+            }
+        }
+    }
+
+    // 猜你喜欢部分开始
+
+    .favourite {
+        .favourite_title {
+            h4 {
+             padding: 5px;
+             color: @font_color;
+            }
+        }
+        .favourite_content {
+            ul {
+                li {
+                    float: left;
+                    padding: 5px 10px;
+                    text-align: center;
+                    width: 50%;
+                    font-size: 14px;
+                    .pro_price {
+                        display: flex;
+                        justify-content: space-between;
+                        em {
+                            font-size: 16px;
+                            color: @font_color;
+                        }
+                        span {
+                            border: 1px solid #ddd;
+                            color: #666;
+                        }
+                    }
+                    >a {
+                        img {
+                            width: 95%;
+                            margin: 0 auto;
+                        }
+                    }
+                    p {
+                        height: 40px;
+                        overflow: hidden;
+                        border-bottom: 1px solid #ccc;
+                    }
+                    
+                }
+            }
+        }
+
+
+        
+    }
+
+
+    // 尾部部分开始
+
+    footer {
+        margin-bottom: 50px;
+        font-size: 14px;
+        text-align: center;
+        color: #666;
+        background: #f5f7f9;
+        .click{
+            padding: 10px 0;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+        .foot_nav {
+            display: flex;
+            padding: 10px 0;
+             border-bottom: 1px solid #ccc;
+            a {
+               width: 25%;
+            }
+        }
+        .foot_app {
+             display: flex;
+             padding: 10px 0;
+             border-bottom: 1px solid #ccc;
+            a {
+               flex: 1;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+
+                
+                span {
+                    display: block;
+                    width: 33px;
+                    height: 33px;
+                    background-image: url('../images/jd-sprites.png');
+                    background-repeat: no-repeat;
+                    background-position: -240px/2 -140px/2;
+                    background-size: 200px 200px;
+                }
+            }
+        }
+        .copy {
+            padding: 20px 0;
+        }
+    }
+
+
+    // 底部导航开始
+    nav {
+        position: fixed;
+        bottom: 0px;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background: #fff;
+        a {
+            float: left;
+            width: 20%;
+            height: 50px;
+            img {
+                width: 114px/2;
+                margin: 0 auto;
+            }
+        }
+    }
+
+
+
+    
+}
